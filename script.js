@@ -1,18 +1,16 @@
-// Start music on ANY user interaction
-document.addEventListener("click", startMusic, { once: true });
-document.addEventListener("keydown", startMusic, { once: true });
-document.addEventListener("touchstart", startMusic, { once: true });
+window.onload = () => {
 
 const music = document.getElementById("bgMusic");
-let musicStarted = false;
+const startBtn = document.getElementById("startBtn");
+const startScreen = document.getElementById("startScreen");
 
-function startMusic() {
-  if (!musicStarted) {
-    music.volume = 0.4;
-    music.play();
-    musicStarted = true;
-  }
-}
+startBtn.addEventListener("click", () => {
+  music.volume = 0.4;
+  music.play().catch(() => {});
+  startScreen.style.display = "none";
+});
+
+
 
 const canvas = document.getElementById("gameCanvas");
 const ctx = canvas.getContext("2d");
@@ -174,3 +172,5 @@ function acceptLove() {
 
 
 gameLoop();
+};
+
