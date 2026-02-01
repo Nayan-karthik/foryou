@@ -60,3 +60,25 @@ canvas {
 #celebrate {
   color: #ff4d6d;
 }
+#startScreen {
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(180deg, #ffd6e8, #fff0f7);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  text-align: center;
+}
+
+#startScreen button {
+  background: #ff4d6d;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 30px;
+  font-size: 20px;
+  cursor: pointer;
+  margin-top: 20px;
+}
