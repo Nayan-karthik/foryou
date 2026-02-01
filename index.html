@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>For You ❤️</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<script>
+for (let i = 0; i < 15; i++) {
+  const heart = document.createElement("div");
+  heart.className = "bg-heart";
+  heart.innerText = "💗";
+  heart.style.left = Math.random() * 100 + "vw";
+  heart.style.animationDelay = Math.random() * 5 + "s";
+  document.body.appendChild(heart);
+}
+</script>
+
+
+<canvas id="gameCanvas" width="400" height="600"></canvas>
+<div id="final">
+  <h1>Will you be my Valentine? 💌</h1>
+
+  <div id="buttons">
+    <button onclick="acceptLove()">YES 💕</button>
+    <button onclick="acceptLove()">YESSS 🥰</button>
+  </div>
+</div>
+
+<div id="celebrate">
+  <h1>YAYYYY 💖</h1>
+  <p>You just made me the happiest person ever 🥹</p>
+</div>
+<audio id="bgMusic" loop>
+  <source src="assets/music.mp3" type="audio/mpeg">
+</audio>
+
+
+<script src="script.js"></script>
+</body>
+</html>
